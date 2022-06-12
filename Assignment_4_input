@@ -1,0 +1,49 @@
+#Q1
+marks = int(input("Enter Your Marks "))
+if marks>80:
+    print("Grade: A")
+elif 60<=marks<80:
+    print("Garde: B")
+elif 50<=marks<=60:
+    print("Grade: C")
+elif 45<=marks<=50:
+    print("Grade: D")
+elif 25<=marks<=45:
+    print("Grade: E")
+elif marks<25:
+    print("Grade: F")
+else:
+    print("Invalid input")
+
+#Q2
+year = int(input("Enter Year: "))
+if((year % 4 == 0 and year % 100 != 0) or year % 400 == 0):
+	print(year, " is a leap year")
+else:
+	print(year, " is not a leap year")
+
+#Q3
+from random import randint
+
+for i in range(10):
+    a=randint(1,20)
+    b=randint(1,13)
+    que=int(input('Question {}: {} x {} ='.format(i+1,a,b)))
+    if que==a*b: 
+        print('Right!')
+    
+    else:
+        print('Wrong! The answer is', a*b)
+
+#Q4
+candies=int(input("Your Guess: "))
+for candies in range(200):
+    if (candies % 5 != 2):
+        continue
+    if (candies % 6 != 3):
+        continue
+    if (candies % 7 != 2):
+        continue
+
+    print(str(candies) + " is the answer!")
+    break
